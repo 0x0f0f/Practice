@@ -1,0 +1,21 @@
+package  main
+
+import "fmt"
+
+func main() {
+    messages := make(chan string)
+
+    go func() {
+        messages  <- "ping1"
+        messages  <- "ping2"
+        messages  <- "ping3"
+    }()
+    // what is the channle's structure?  is it made up of messages
+
+    msg := <- messages
+    fmt.Println(msg)
+    msg = <- messages
+    fmt.Println(msg)
+    msg = <- messages
+    fmt.Println(msg)
+}
