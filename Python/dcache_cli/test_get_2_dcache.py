@@ -34,6 +34,6 @@ if __name__ == '__main__':
 
     # get_req = [(pydcache.get, keys+str(i)) for i in xrange(1, 500000)]
     # pprint(pool.map(func_get, get_req))
-    for i in xrange(1, 5000000):
+    for i in xrange(1, 500000):
         pydcache.get('keys'+str(i))
 

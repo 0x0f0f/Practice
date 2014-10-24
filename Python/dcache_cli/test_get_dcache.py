@@ -28,14 +28,14 @@ def produce_random_string(size):
 
 
 if __name__ == '__main__':
-    conf = {'cache_url': 'http://10.13.37.53:8080', 'cache_app': 'testconcurrent_app'}
+    conf = {'cache_url': 'http://10.13.37.51:8080', 'cache_app': 'testconcurrent_app'}
     pydcache = pydcache(conf)
     # pool = Pool(200)
 
     # get_req = [(pydcache.get, keys+str(i)) for i in xrange(1, 500000)]
     # pprint(pool.map(func_get, get_req))
     cnt = 0
-    for i in xrange(1, 5000000):
+    for i in xrange(1, 500000):
         val = pydcache.get('keys'+str(i))
         if val is not None:
             cnt = cnt + 1

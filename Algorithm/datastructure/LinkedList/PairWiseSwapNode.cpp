@@ -68,6 +68,8 @@ class LinkList {
                 now -> next = inext;
                 now = curr;
             }
+            if( inext == NULL && curr != NULL )
+                now -> next = curr;
         }
 
         void pairwseSwap2() {

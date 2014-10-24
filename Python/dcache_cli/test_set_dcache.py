@@ -42,6 +42,6 @@ if __name__ == '__main__':
     # set_req = [(pydcache.set, keys+str(i), produce_random_string(1 + i%500)) for i in xrange(1, 100)]
     # pprint(pool.map(func_set, set_req))
 
-    for i in xrange(1, 5000000):
+    for i in xrange(1, 500000):
         pydcache.set("keys"+str(i), produce_random_string(1 + i % 200))
 
